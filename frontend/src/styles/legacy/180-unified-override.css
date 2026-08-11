@@ -1,0 +1,537 @@
+/* PROTECTED: FINGOLD UNIFIED MINIMAL STYLE LAYER — не менять — извлечено из legacy.css (было строками 4373-4894 до разбиения на файлы) */
+
+/* =========================================================
+   FINGOLD UNIFIED MINIMAL STYLE LAYER
+   This layer is intentionally placed in the last T123 block.
+   It unifies all previous sections without breaking JS logic.
+   ========================================================= */
+
+#fgb-cap, #fgb-products, #fgb-process, #fgb-global, #fgb-serve, #fgb-insights,
+#fgb-team, #fgb-careers, #fgb-partner, #fgb-news, #fgb-contacts, #fgb-login,
+#fgb-footer, #fgb-search-overlay, #fgb-cookie {
+  --fg-bg: #F7F5F0 !important;
+  --fg-white: #FFFFFF !important;
+  --fg-text: #111111 !important;
+  --fg-muted: #6F6F6F !important;
+  --fg-copper: #B89A5E !important;
+  --fg-copper-deep: #B89A5E !important;
+  --fg-gold: #B89A5E !important;
+  --fg-blue: #111111 !important;
+  --fg-paper: #F7F5F0 !important;
+  --fg-line: #D8D2C7 !important;
+  --fg-dark: #1D1D1B !important;
+  --fg-serif: Georgia, "Times New Roman", Times, serif !important;
+  --fg-sans: Arial, Helvetica, sans-serif !important;
+  font-family: var(--fg-sans) !important;
+}
+
+/* General section rhythm */
+#fgb-cap .fc-section,
+#fgb-products .fpd-section,
+#fgb-process .fp-section,
+#fgb-global .fg-section,
+#fgb-serve .fs-section,
+#fgb-careers .fr-section,
+#fgb-news .fn-section {
+  background: var(--fg-bg) !important;
+  padding-top: 104px !important;
+  padding-bottom: 112px !important;
+  overflow: hidden !important;
+}
+
+#fgb-cap .fc-inner,
+#fgb-products .fpd-inner,
+#fgb-process .fp-inner,
+#fgb-global .fg-inner,
+#fgb-serve .fs-inner,
+#fgb-insights .fi-inner,
+#fgb-careers .fr-inner,
+#fgb-careers .fr-vacancies-inner,
+#fgb-news .fn-inner {
+  width: min(1360px, calc(100% - 64px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Remove decorative noise */
+#fgb-cap .fc-section::after,
+#fgb-process .fp-section::before,
+#fgb-serve .fs-section::before,
+#fgb-insights .fi-section::before,
+#fgb-partner .fpa-section::before,
+#fgb-login .fl-section::before {
+  display: none !important;
+}
+
+/* Typography */
+#fgb-cap .fc-title,
+#fgb-products .fpd-title,
+#fgb-process .fp-title,
+#fgb-global .fg-title,
+#fgb-serve .fs-title,
+#fgb-insights .fi-title,
+#fgb-careers .fr-title,
+#fgb-news .fn-heading,
+#fgb-partner .fpa-title,
+#fgb-contacts .fct-title,
+#fgb-login .fl-brand-title {
+  color: var(--fg-text) !important;
+  font-family: var(--fg-serif) !important;
+  font-size: clamp(38px, 4.4vw, 68px) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.045em !important;
+}
+#fgb-cap .fc-title span,
+#fgb-products .fpd-title span,
+#fgb-process .fp-title span,
+#fgb-global .fg-title span,
+#fgb-serve .fs-title span,
+#fgb-insights .fi-title span,
+#fgb-careers .fr-title span,
+#fgb-news .fn-heading span,
+#fgb-partner .fpa-title span,
+#fgb-contacts .fct-title span,
+#fgb-login .fl-brand-title span {
+  color: var(--fg-copper) !important;
+}
+
+#fgb-cap .fc-card h3,
+#fgb-products .fpd-card h3,
+#fgb-process .fp-step h3,
+#fgb-global .fg-route h3,
+#fgb-serve .fs-card h3,
+#fgb-insights .fi-side-card h3,
+#fgb-careers .fr-value h3,
+#fgb-news .fn-card h3,
+#fgb-news .fn-arc-card h3,
+#fgb-partner .fpa-type h3 {
+  color: var(--fg-text) !important;
+  font-family: var(--fg-serif) !important;
+  font-weight: 400 !important;
+}
+
+#fgb-cap .fc-card p,
+#fgb-products .fpd-card p,
+#fgb-process .fp-lead,
+#fgb-process .fp-step p,
+#fgb-global .fg-lead,
+#fgb-global .fg-route p,
+#fgb-serve .fs-lead,
+#fgb-serve .fs-card p,
+#fgb-careers .fr-lead,
+#fgb-careers .fr-value p,
+#fgb-news .fn-card p,
+#fgb-news .fn-arc-card p,
+#fgb-partner .fpa-lead,
+#fgb-partner .fpa-type p {
+  color: var(--fg-muted) !important;
+}
+
+/* Kicker labels */
+#fgb-cap .fc-kicker,
+#fgb-products .fpd-kicker,
+#fgb-process .fp-kicker,
+#fgb-global .fg-kicker,
+#fgb-serve .fs-kicker,
+#fgb-insights .fi-kicker,
+#fgb-careers .fr-kicker,
+#fgb-news .fn-kicker,
+#fgb-partner .fpa-kicker,
+#fgb-contacts .fct-kicker,
+#fgb-login .fl-brand-kicker {
+  color: var(--fg-copper) !important;
+  font-family: var(--fg-sans) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+/* Unified cards */
+#fgb-cap .fc-card,
+#fgb-products .fpd-card,
+#fgb-global .fg-route,
+#fgb-serve .fs-card,
+#fgb-news .fn-card,
+#fgb-news .fn-arc-card,
+#fgb-insights .fi-side-card,
+#fgb-careers .fr-value,
+#fgb-careers .fr-vac-item,
+#fgb-partner .fpa-type {
+  background: var(--fg-white) !important;
+  border: 1px solid var(--fg-line) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Unified accent lines */
+#fgb-cap .fc-card::before,
+#fgb-products .fpd-card::before,
+#fgb-global .fg-route::before,
+#fgb-serve .fs-card::before,
+#fgb-news .fn-card::before,
+#fgb-news .fn-arc-card::before,
+#fgb-insights .fi-side-card::before {
+  background: var(--fg-copper) !important;
+  height: 4px !important;
+}
+
+/* Make carousel/cards calmer — icons only; photos stay in color */
+#fgb-cap .fc-icon,
+#fgb-serve .fs-icon {
+  opacity: .74 !important;
+  filter: grayscale(1) contrast(.82) !important;
+}
+#fgb-insights .fi-side-icon {
+  opacity: 1 !important;
+  filter: none !important;
+}
+#fgb-cap .fc-image {
+  opacity: 1 !important;
+  filter: none !important;
+}
+#fgb-cap .fc-controls,
+#fgb-cap .fc-arrow,
+#fgb-cap .fc-dot {
+  border-color: var(--fg-line) !important;
+  color: var(--fg-text) !important;
+}
+
+/* Products */
+#fgb-products .fpd-tabs {
+  border-bottom-color: var(--fg-line) !important;
+}
+#fgb-products .fpd-tab {
+  color: var(--fg-muted) !important;
+  font-family: var(--fg-sans) !important;
+}
+#fgb-products .fpd-tab.is-active {
+  color: var(--fg-text) !important;
+  border-bottom-color: var(--fg-copper) !important;
+}
+#fgb-products .fpd-stripe {
+  background: var(--fg-dark) !important;
+  color: var(--fg-white) !important;
+}
+
+/* Process */
+#fgb-process .fp-step {
+  border-color: var(--fg-line) !important;
+}
+#fgb-process .fp-num {
+  color: var(--fg-copper) !important;
+  border-color: var(--fg-copper) !important;
+  background: var(--fg-white) !important;
+}
+#fgb-process .fp-detail-tags li,
+#fgb-global .fg-route-tags li,
+#fgb-serve .fs-tag-list li {
+  background: transparent !important;
+  border: 1px solid var(--fg-line) !important;
+  color: var(--fg-muted) !important;
+}
+#fgb-process .fp-detail-tags li::before {
+  background: var(--fg-copper) !important;
+}
+#fgb-process .fp-cta {
+  background: var(--fg-dark) !important;
+  box-shadow: none !important;
+}
+#fgb-process .fp-cta-btn {
+  background: var(--fg-copper) !important;
+}
+
+/* Global */
+#fgb-global .fg-route-flag {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 54px !important;
+  height: 34px !important;
+  margin: 0 0 24px !important;
+  padding: 0 12px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid var(--fg-line) !important;
+  color: var(--fg-text) !important;
+  background: var(--fg-white) !important;
+  font-family: var(--fg-sans) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+}
+#fgb-global .fg-stats-strip {
+  background: var(--fg-dark) !important;
+}
+#fgb-global .fg-loco {
+  background: var(--fg-bg) !important;
+  border-top: 1px solid var(--fg-line) !important;
+}
+#fgb-global .fg-loco-visual {
+  background: var(--fg-white) !important;
+  border: 1px solid var(--fg-line) !important;
+}
+#fgb-global .fg-loco-visual::before {
+  color: rgba(184,154,94,.13) !important;
+}
+#fgb-global .fg-loco-btn {
+  background: var(--fg-dark) !important;
+}
+
+/* Insights: convert to light editorial block */
+#fgb-insights .fi-section {
+  background: var(--fg-white) !important;
+  color: var(--fg-text) !important;
+  padding-top: 104px !important;
+  padding-bottom: 112px !important;
+}
+#fgb-insights .fi-title,
+#fgb-insights .fi-side-card h3 {
+  color: var(--fg-text) !important;
+}
+#fgb-insights .fi-all,
+#fgb-insights .fi-side-card p {
+  color: var(--fg-muted) !important;
+}
+#fgb-insights .fi-featured {
+  background:
+    linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.28) 55%, transparent 100%),
+    url("../../assets/photos/crane-construction.png")
+    center / cover no-repeat !important;
+  border: 1px solid var(--fg-line) !important;
+  min-height: 420px !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+#fgb-insights .fi-featured h3 {
+  color: #fff !important;
+}
+#fgb-insights .fi-featured p {
+  color: rgba(255,255,255,.72) !important;
+}
+#fgb-insights .fi-featured::before {
+  background: var(--fg-copper) !important;
+}
+#fgb-insights .fi-feat-tag {
+  color: rgba(255,255,255,.75) !important;
+}
+#fgb-insights .fi-feat-link {
+  color: #fff !important;
+  border-color: rgba(255,255,255,.34) !important;
+  background: transparent !important;
+}
+#fgb-insights .fi-stats {
+  border: 1px solid var(--fg-line) !important;
+  border-top: 0 !important;
+}
+#fgb-insights .fi-stat {
+  background: var(--fg-bg) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-insights .fi-stat-num {
+  color: var(--fg-text) !important;
+}
+#fgb-insights .fi-stat-label {
+  color: var(--fg-muted) !important;
+}
+
+/* Team / careers */
+#fgb-team .ft-section,
+#fgb-careers .fr-vacancies-wrap {
+  background: var(--fg-bg) !important;
+}
+#fgb-careers .fr-btn {
+  background: var(--fg-dark) !important;
+  color: var(--fg-white) !important;
+  border-radius: 0 !important;
+}
+#fgb-careers .fr-vac-count {
+  background: var(--fg-copper) !important;
+}
+
+/* Partner: keep as clean dark institutional block */
+#fgb-partner .fpa-section,
+#fgb-contacts .fct-info,
+#fgb-login .fl-section,
+#fgb-footer .ff-section {
+  background: var(--fg-dark) !important;
+  color: var(--fg-white) !important;
+}
+#fgb-partner .fpa-title,
+#fgb-partner .fpa-type h3,
+#fgb-contacts .fct-title,
+#fgb-login .fl-brand-title,
+#fgb-login .fl-form-title,
+#fgb-footer .ff-logo {
+  color: var(--fg-white) !important;
+}
+#fgb-partner .fpa-form-panel,
+#fgb-contacts .fct-form-wrap {
+  background: var(--fg-bg) !important;
+  color: var(--fg-text) !important;
+}
+#fgb-partner .fpa-form-title,
+#fgb-contacts .fct-form-title {
+  color: var(--fg-text) !important;
+  font-family: var(--fg-serif) !important;
+}
+#fgb-partner .fpa-form-sub,
+#fgb-contacts .fct-privacy {
+  color: var(--fg-muted) !important;
+}
+#fgb-partner .fpa-input,
+#fgb-partner .fpa-select,
+#fgb-partner .fpa-textarea,
+#fgb-contacts .fct-input,
+#fgb-contacts .fct-select,
+#fgb-contacts .fct-textarea {
+  background: var(--fg-white) !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-partner .fpa-label,
+#fgb-contacts .fct-label {
+  color: var(--fg-muted) !important;
+}
+#fgb-partner .fpa-submit,
+#fgb-contacts .fct-submit,
+#fgb-login .fl-submit {
+  background: var(--fg-dark) !important;
+  color: var(--fg-white) !important;
+  border-radius: 0 !important;
+}
+
+/* News */
+#fgb-news .fn-section::before {
+  background: var(--fg-bg) !important;
+}
+#fgb-news .fn-card--dark {
+  background: var(--fg-dark) !important;
+  color: var(--fg-white) !important;
+}
+#fgb-news .fn-card--dark h3,
+#fgb-news .fn-card--dark .fn-tag,
+#fgb-news .fn-card--dark .fn-link {
+  color: var(--fg-white) !important;
+}
+#fgb-news .fn-card--dark p {
+  color: rgba(255,255,255,.72) !important;
+}
+#fgb-news .fn-all,
+#fgb-news .fn-link {
+  color: var(--fg-text) !important;
+}
+
+/* Login */
+#fgb-login .fl-form-panel {
+  background: var(--fg-dark) !important;
+}
+#fgb-login .fl-input {
+  background: rgba(255,255,255,.06) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+#fgb-login .fl-register {
+  border-color: rgba(255,255,255,.16) !important;
+}
+
+/* Search overlay */
+#fgb-search-overlay .fso-backdrop {
+  background: rgba(29,29,27,.94) !important;
+}
+#fgb-search-overlay .fso-search-btn {
+  background: var(--fg-copper) !important;
+}
+#fgb-search-overlay .fso-tag {
+  border-radius: 0 !important;
+}
+
+/* Cookie */
+#fgb-cookie .fck-banner {
+  background: var(--fg-white) !important;
+  color: var(--fg-text) !important;
+  border-top: 1px solid var(--fg-line) !important;
+  box-shadow: 0 -16px 40px rgba(17,17,17,.08) !important;
+}
+#fgb-cookie .fck-icon {
+  display: none !important;
+}
+#fgb-cookie .fck-copy,
+#fgb-cookie .fck-copy strong,
+#fgb-cookie .fck-toggle-label,
+#fgb-cookie .fck-toggle-label strong {
+  color: var(--fg-text) !important;
+}
+#fgb-cookie .fck-accept {
+  background: var(--fg-dark) !important;
+}
+#fgb-cookie .fck-decline,
+#fgb-cookie .fck-close,
+#fgb-cookie .fck-toggle-item {
+  color: var(--fg-muted) !important;
+  border-color: var(--fg-line) !important;
+  background: var(--fg-white) !important;
+}
+
+/* Back top */
+#fgb-back-top {
+  background: var(--fg-dark) !important;
+  border-radius: 0 !important;
+}
+#fgb-back-top:hover {
+  background: var(--fg-copper) !important;
+}
+
+/* Remove excessive rounded corners / shadows */
+#fgb-cap [class*="card"],
+#fgb-products [class*="card"],
+#fgb-process [class*="cta"],
+#fgb-global [class*="route"],
+#fgb-serve [class*="card"],
+#fgb-insights [class*="card"],
+#fgb-news [class*="card"],
+#fgb-partner input,
+#fgb-partner select,
+#fgb-partner textarea,
+#fgb-contacts input,
+#fgb-contacts select,
+#fgb-contacts textarea {
+  border-radius: 0 !important;
+}
+
+/* Mobile cleanup */
+@media (max-width: 720px) {
+  #fgb-cap .fc-inner,
+  #fgb-products .fpd-inner,
+  #fgb-process .fp-inner,
+  #fgb-global .fg-inner,
+  #fgb-serve .fs-inner,
+  #fgb-insights .fi-inner,
+  #fgb-careers .fr-inner,
+  #fgb-careers .fr-vacancies-inner,
+  #fgb-news .fn-inner {
+    width: calc(100% - 32px) !important;
+  }
+  #fgb-cap .fc-section,
+  #fgb-products .fpd-section,
+  #fgb-process .fp-section,
+  #fgb-global .fg-section,
+  #fgb-serve .fs-section,
+  #fgb-insights .fi-section,
+  #fgb-careers .fr-section,
+  #fgb-news .fn-section {
+    padding-top: 70px !important;
+    padding-bottom: 82px !important;
+  }
+  #fgb-cap .fc-title,
+  #fgb-products .fpd-title,
+  #fgb-process .fp-title,
+  #fgb-global .fg-title,
+  #fgb-serve .fs-title,
+  #fgb-insights .fi-title,
+  #fgb-careers .fr-title,
+  #fgb-news .fn-heading {
+    font-size: 34px !important;
+    line-height: 1.12 !important;
+  }
+}
+

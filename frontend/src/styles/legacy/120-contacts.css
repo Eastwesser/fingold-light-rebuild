@@ -1,0 +1,318 @@
+/* Contacts (контакты, форма) — извлечено из legacy.css (было строками 2979-3294 до разбиения на файлы) */
+
+#fgb-contacts {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-paper: #f3f5f6;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-contacts,
+#fgb-contacts * { box-sizing: border-box; }
+#fgb-contacts a  { color: inherit; text-decoration: none; }
+#fgb-contacts h2,
+#fgb-contacts p  { margin-top: 0; }
+
+/* Layout */
+#fgb-contacts .fct-section {
+  position: relative;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+#fgb-contacts .fct-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: 840px;
+}
+
+/* Left: dark info panel */
+#fgb-contacts .fct-info {
+  position: relative;
+  padding: 96px max(48px, calc((100vw - 1660px) / 2 + 80px)) 80px 80px;
+  background: #0d1820;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#fgb-contacts .fct-info::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 6px; height: 100%;
+  background: linear-gradient(180deg, #5eb8c4 0%, #a88cb8 33%, #e7a050 66%, #a68856 100%);
+}
+
+#fgb-contacts .fct-kicker {
+  margin: 0 0 28px;
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#fgb-contacts .fct-title {
+  margin: 0 0 48px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: clamp(38px, 3.6vw, 62px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+#fgb-contacts .fct-title span { color: var(--fg-copper); }
+
+/* Contact details */
+#fgb-contacts .fct-details {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 56px;
+}
+#fgb-contacts .fct-detail-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+#fgb-contacts .fct-detail-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,.16);
+  display: grid;
+  place-items: center;
+}
+#fgb-contacts .fct-detail-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--fg-copper);
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#fgb-contacts .fct-detail-label {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,.44);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#fgb-contacts .fct-detail-value {
+  color: #fff;
+  font-family: var(--fg-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+#fgb-contacts .fct-detail-value a[href^="tel"],
+#fgb-contacts .fct-detail-value a[href^="mailto"] {
+  color: #fff;
+}
+
+/* Tagline */
+#fgb-contacts .fct-tagline {
+  padding-left: 20px;
+  border-left: 4px solid var(--fg-copper);
+  color: rgba(255,255,255,.52);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Right: form panel */
+#fgb-contacts .fct-form-wrap {
+  padding: 96px 80px 80px max(48px, calc((100vw - 1660px) / 2 + 40px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--fg-paper);
+}
+#fgb-contacts .fct-form-title {
+  margin: 0 0 48px;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+/* Form styles */
+#fgb-contacts .fct-form {
+  font-family: var(--fg-sans);
+  width: 100%;
+  max-width: 520px;
+}
+#fgb-contacts .fct-form input,
+#fgb-contacts .fct-form textarea,
+#fgb-contacts .fct-form select { font: inherit; }
+
+#fgb-contacts .fct-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+#fgb-contacts .fct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 18px;
+}
+#fgb-contacts .fct-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #606870;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+#fgb-contacts .fct-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  border: 1px solid #d4d8da;
+  border-radius: 2px;
+  background: #fff;
+  color: #2d2d2d;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .16s;
+}
+#fgb-contacts .fct-input:focus {
+  border-color: var(--fg-copper);
+}
+#fgb-contacts .fct-textarea {
+  width: 100%;
+  height: 130px;
+  padding: 16px 18px;
+  border: 1px solid #d4d8da;
+  border-radius: 2px;
+  background: #fff;
+  color: #2d2d2d;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  transition: border-color .16s;
+}
+#fgb-contacts .fct-textarea:focus {
+  border-color: var(--fg-copper);
+}
+
+/* Select field */
+#fgb-contacts .fct-select-wrap {
+  position: relative;
+}
+#fgb-contacts .fct-select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: 16px;
+  width: 8px; height: 8px;
+  border-right: 1.5px solid #6c7479;
+  border-bottom: 1.5px solid #6c7479;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+#fgb-contacts .fct-select {
+  width: 100%;
+  height: 52px;
+  padding: 0 42px 0 18px;
+  border: 1px solid #d4d8da;
+  border-radius: 2px;
+  background: #fff;
+  color: #2d2d2d;
+  font-size: 16px;
+  appearance: none;
+  outline: none;
+  transition: border-color .16s;
+  cursor: pointer;
+}
+#fgb-contacts .fct-select:focus { border-color: var(--fg-copper); }
+
+/* Error */
+#fgb-contacts .t-input-error {
+  display: none;
+  margin-top: 6px;
+  color: #c0392b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+#fgb-contacts .vb-input-group.error .t-input-error { display: block; }
+#fgb-contacts .vb-input-group.error .fct-input,
+#fgb-contacts .vb-input-group.error .fct-textarea,
+#fgb-contacts .vb-input-group.error .fct-select { border-color: #c0392b; }
+
+/* Submit */
+#fgb-contacts .fct-submit {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  background: #2d2d2d;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  font-family: var(--fg-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s;
+}
+#fgb-contacts .fct-submit:hover { background: #1a1a1a; }
+
+/* Privacy note */
+#fgb-contacts .fct-privacy {
+  margin-top: 18px;
+  color: #9aa0a5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Success message */
+#fgb-contacts .js-successbox {
+  display: none;
+  padding: 28px 32px;
+  background: #f0faf8;
+  border-left: 4px solid #5eb8c4;
+}
+#fgb-contacts .js-successbox p {
+  margin: 0;
+  color: #2d2d2d;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  #fgb-contacts .fct-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  #fgb-contacts .fct-info {
+    padding: 72px 44px 64px;
+  }
+  #fgb-contacts .fct-info::after {
+    width: 100%; height: 6px;
+    top: auto; bottom: 0; right: 0;
+    background: linear-gradient(90deg, #5eb8c4 0%, #a88cb8 33%, #e7a050 66%, #a68856 100%);
+  }
+  #fgb-contacts .fct-form-wrap {
+    padding: 72px 44px 80px;
+  }
+}
+@media (max-width: 720px) {
+  #fgb-contacts .fct-info,
+  #fgb-contacts .fct-form-wrap { padding: 56px 24px; }
+  #fgb-contacts .fct-row { grid-template-columns: 1fr; }
+  #fgb-contacts .fct-form { max-width: none; }
+  #fgb-contacts .fct-title { font-size: 36px; }
+}

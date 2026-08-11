@@ -1,0 +1,413 @@
+/* PROTECTED: FINGOLD LIGHT THEME (финальный слой) — не менять — извлечено из legacy.css (было строками 4895-5277 до разбиения на файлы) */
+
+/* =========================================================
+   FINGOLD LIGHT THEME
+   Warm white, ivory, sand and restrained gold.
+   No black or dark surface is used in the primary interface.
+   ========================================================= */
+
+html,
+body {
+  background: #FBF9F4 !important;
+  color: #4D463C !important;
+}
+
+#fgb-nav, #fgb-hero, #fgb-about, #fgb-cap, #fgb-products, #fgb-process,
+#fgb-global, #fgb-serve, #fgb-insights, #fgb-team, #fgb-careers,
+#fgb-partner, #fgb-news, #fgb-contacts, #fgb-login, #fgb-footer,
+#fgb-search-overlay, #fgb-cookie, #fgb-back-top {
+  --fg-bg: #F7F2E8 !important;
+  --fg-white: #FFFEFB !important;
+  --fg-text: #4D463C !important;
+  --fg-muted: #82796C !important;
+  --fg-copper: #B38B4D !important;
+  --fg-copper-deep: #9D743B !important;
+  --fg-gold: #B38B4D !important;
+  --fg-blue: #76664F !important;
+  --fg-paper: #F4EFE6 !important;
+  --fg-line: #DDD4C5 !important;
+  --fg-dark: #EEE5D6 !important;
+}
+
+/* Navigation and hero */
+#fgb-nav {
+  background: rgba(255, 254, 251, .96) !important;
+  border-bottom-color: var(--fg-line) !important;
+  box-shadow: 0 8px 28px rgba(91, 76, 53, .05) !important;
+}
+#fgb-nav .fn-search,
+#fgb-nav .fn-login,
+#fgb-nav .fn-burger,
+#fgb-nav .fn-drawer {
+  background: var(--fg-white) !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-hero .fh-section {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 254, 251, .96) 0%,
+      rgba(255, 254, 251, .88) 38%,
+      rgba(255, 254, 251, .35) 62%,
+      rgba(255, 254, 251, .08) 100%
+    ),
+    url("../../assets/photos/skyscraper-sky.png") right center / cover no-repeat,
+    linear-gradient(180deg, #FFFEFB 0%, #F7F2E8 100%) !important;
+}
+#fgb-hero .fh-btn,
+#fgb-about .fa-btn {
+  background: #E8D5AE !important;
+  color: #5A4931 !important;
+  border-color: #D2B77D !important;
+}
+#fgb-hero .fh-panel,
+#fgb-hero .fh-tile,
+#fgb-about .fa-card {
+  background: var(--fg-white) !important;
+  border-color: var(--fg-line) !important;
+}
+
+/* Main content surfaces */
+#fgb-cap .fc-section,
+#fgb-products .fpd-section,
+#fgb-process .fp-section,
+#fgb-global .fg-section,
+#fgb-serve .fs-section,
+#fgb-team .ft-section,
+#fgb-careers .fr-section,
+#fgb-careers .fr-vacancies-wrap,
+#fgb-news .fn-section {
+  background: var(--fg-bg) !important;
+}
+#fgb-cap .fc-card,
+#fgb-products .fpd-card,
+#fgb-global .fg-route,
+#fgb-serve .fs-card,
+#fgb-insights .fi-side-card,
+#fgb-careers .fr-value,
+#fgb-careers .fr-vac-item,
+#fgb-news .fn-card,
+#fgb-news .fn-arc-card,
+#fgb-partner .fpa-type {
+  background: var(--fg-white) !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+
+/* Previously dark product and process callouts */
+#fgb-products .fpd-card--wide,
+#fgb-products .fpd-stripe,
+#fgb-process .fp-cta,
+#fgb-global .fg-stats-strip,
+#fgb-news .fn-card--dark {
+  background: #EFE5D4 !important;
+  color: var(--fg-text) !important;
+  border: 1px solid var(--fg-line) !important;
+}
+#fgb-products .fpd-card--wide h3,
+#fgb-products .fpd-stripe-text strong,
+#fgb-process .fp-cta-text strong,
+#fgb-global .fg-stat-num,
+#fgb-news .fn-card--dark h3,
+#fgb-news .fn-card--dark .fn-tag,
+#fgb-news .fn-card--dark .fn-link {
+  color: var(--fg-text) !important;
+}
+#fgb-products .fpd-card--wide p,
+#fgb-products .fpd-card--wide .fpd-card-meta li,
+#fgb-products .fpd-stripe-text,
+#fgb-process .fp-cta-text,
+#fgb-global .fg-stat-desc,
+#fgb-news .fn-card--dark p {
+  color: var(--fg-muted) !important;
+  border-color: #D3C6B2 !important;
+}
+#fgb-global .fg-stat {
+  border-color: #D7CCBA !important;
+}
+#fgb-global .fg-loco,
+#fgb-global .fg-loco-visual {
+  background: #F5EFE3 !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-global .fg-loco-visual {
+  background: linear-gradient(135deg, #F8F1E4 0%, #E8D7B7 55%, #D6BA82 100%) !important;
+}
+
+/* Buttons — soft gold instead of dark fills */
+#fgb-products .fpd-stripe-btn,
+#fgb-process .fp-cta-btn,
+#fgb-global .fg-loco-btn,
+#fgb-team .ft-join-btn,
+#fgb-careers .fr-btn,
+#fgb-partner .fpa-submit,
+#fgb-contacts .fct-submit,
+#fgb-login .fl-submit,
+#fgb-footer .ff-cta-btn,
+#fgb-search-overlay .fso-search-btn,
+#fgb-cookie .fck-accept,
+#fgb-back-top {
+  background: #D7BC84 !important;
+  color: #51432F !important;
+  border-color: #CBAE72 !important;
+  box-shadow: none !important;
+}
+#fgb-products .fpd-stripe-btn:hover,
+#fgb-process .fp-cta-btn:hover,
+#fgb-global .fg-loco-btn:hover,
+#fgb-team .ft-join-btn:hover,
+#fgb-careers .fr-btn:hover,
+#fgb-partner .fpa-submit:hover,
+#fgb-contacts .fct-submit:hover,
+#fgb-login .fl-submit:hover,
+#fgb-footer .ff-cta-btn:hover,
+#fgb-search-overlay .fso-search-btn:hover,
+#fgb-cookie .fck-accept:hover,
+#fgb-back-top:hover {
+  background: #C9AA6E !important;
+  color: #4D402E !important;
+}
+
+/* Partnership and contacts */
+#fgb-partner .fpa-section,
+#fgb-contacts .fct-info {
+  background: #F2EBDD !important;
+  color: var(--fg-text) !important;
+}
+#fgb-partner .fpa-info {
+  border-color: var(--fg-line) !important;
+}
+#fgb-partner .fpa-title,
+#fgb-partner .fpa-type h3,
+#fgb-partner .fpa-stat-num,
+#fgb-contacts .fct-title,
+#fgb-contacts .fct-detail-value,
+#fgb-contacts .fct-detail-value a,
+#fgb-partner .fpa-form-title,
+#fgb-contacts .fct-form-title {
+  color: var(--fg-text) !important;
+}
+#fgb-partner .fpa-lead,
+#fgb-partner .fpa-type p,
+#fgb-partner .fpa-stat-label,
+#fgb-partner .fpa-form-sub,
+#fgb-partner .fpa-privacy,
+#fgb-contacts .fct-detail-label,
+#fgb-contacts .fct-tagline,
+#fgb-contacts .fct-privacy {
+  color: var(--fg-muted) !important;
+}
+#fgb-partner .fpa-form-panel,
+#fgb-contacts .fct-form-wrap {
+  background: #FFFEFB !important;
+  color: var(--fg-text) !important;
+}
+#fgb-partner .fpa-input,
+#fgb-partner .fpa-select,
+#fgb-partner .fpa-textarea,
+#fgb-contacts .fct-input,
+#fgb-contacts .fct-select,
+#fgb-contacts .fct-textarea {
+  background: #FFFFFF !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-partner .fpa-input::placeholder,
+#fgb-partner .fpa-textarea::placeholder,
+#fgb-contacts input::placeholder,
+#fgb-contacts textarea::placeholder {
+  color: #AAA092 !important;
+}
+#fgb-partner .fpa-select option {
+  background: #FFFFFF !important;
+  color: var(--fg-text) !important;
+}
+#fgb-partner .fpa-label,
+#fgb-contacts .fct-label {
+  color: var(--fg-muted) !important;
+}
+#fgb-partner .js-successbox p {
+  color: var(--fg-text) !important;
+}
+
+/* Login — light private-access card */
+#fgb-login .fl-section {
+  background: #F3ECDF !important;
+  color: var(--fg-text) !important;
+}
+#fgb-login .fl-form-panel {
+  background: #FFFEFB !important;
+  color: var(--fg-text) !important;
+  border: 1px solid var(--fg-line) !important;
+  box-shadow: 0 24px 70px rgba(91, 76, 53, .08) !important;
+}
+#fgb-login .fl-brand-title,
+#fgb-login .fl-form-title,
+#fgb-login .fl-field-label,
+#fgb-login .fl-feature strong {
+  color: var(--fg-text) !important;
+}
+#fgb-login .fl-feature p,
+#fgb-login .fl-brand-footer,
+#fgb-login .fl-form-sub,
+#fgb-login .fl-divider,
+#fgb-login .fl-back,
+#fgb-login .fl-pass-toggle {
+  color: var(--fg-muted) !important;
+}
+#fgb-login .fl-divider::before,
+#fgb-login .fl-divider::after {
+  background: var(--fg-line) !important;
+}
+#fgb-login .fl-input {
+  background: #FFFFFF !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-login .fl-input::placeholder {
+  color: #AAA092 !important;
+}
+#fgb-login .fl-register {
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+  background: #F7F2E8 !important;
+}
+
+/* Footer */
+#fgb-footer .ff-section,
+#fgb-footer .ff-footer {
+  background: #F4EFE6 !important;
+  color: var(--fg-text) !important;
+}
+#fgb-footer .ff-logo,
+#fgb-footer .ff-tagline,
+#fgb-footer .ff-cta-label,
+#fgb-footer .ff-col-links a,
+#fgb-footer .ff-contact-value,
+#fgb-footer .ff-contact-value a {
+  color: var(--fg-text) !important;
+}
+#fgb-footer .ff-col-title,
+#fgb-footer .ff-contact-label,
+#fgb-footer .ff-copy,
+#fgb-footer .ff-legal a {
+  color: var(--fg-muted) !important;
+}
+#fgb-footer .ff-top,
+#fgb-footer .ff-sitemap,
+#fgb-footer .ff-contacts {
+  border-color: var(--fg-line) !important;
+}
+#fgb-footer .ff-social-link {
+  background: #FFFEFB !important;
+  color: var(--fg-muted) !important;
+  border-color: var(--fg-line) !important;
+}
+
+/* Search overlay — translucent ivory instead of black */
+#fgb-search-overlay .fso-backdrop {
+  background: rgba(247, 242, 232, .97) !important;
+  color: var(--fg-text) !important;
+}
+#fgb-search-overlay .fso-label,
+#fgb-search-overlay .fso-sugg-label,
+#fgb-search-overlay .fso-no-results {
+  color: var(--fg-muted) !important;
+}
+#fgb-search-overlay .fso-input-row {
+  background: #FFFEFB !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-search-overlay .fso-input {
+  color: var(--fg-text) !important;
+}
+#fgb-search-overlay .fso-input::placeholder {
+  color: #AAA092 !important;
+}
+#fgb-search-overlay .fso-search-btn svg {
+  stroke: #51432F !important;
+}
+#fgb-search-overlay .fso-tag,
+#fgb-search-overlay .fso-result-title,
+#fgb-search-overlay .fso-close {
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-search-overlay .fso-close {
+  background: #FFFEFB !important;
+}
+#fgb-search-overlay .fso-result-item {
+  border-color: var(--fg-line) !important;
+}
+
+/* Cookie controls */
+#fgb-cookie .fck-banner,
+#fgb-cookie .fck-toggle-item {
+  background: #FFFEFB !important;
+  color: var(--fg-text) !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-cookie .fck-copy,
+#fgb-cookie .fck-copy strong,
+#fgb-cookie .fck-toggle-label,
+#fgb-cookie .fck-toggle-label strong {
+  color: var(--fg-text) !important;
+}
+#fgb-cookie .fck-decline,
+#fgb-cookie .fck-close,
+#fgb-cookie .fck-manage {
+  color: var(--fg-muted) !important;
+  border-color: var(--fg-line) !important;
+  background: #FFFFFF !important;
+}
+#fgb-cookie .fck-slider {
+  background: #DCD2C1 !important;
+}
+
+/* Founder image and floating controls — clean photo + HTML sign overlay */
+#fgb-team .ft-founder-photo {
+  background:
+    linear-gradient(to top, rgba(13, 24, 32, .55) 0%, rgba(13, 24, 32, .0) 48%),
+    url("../../assets/photos/founder.png") 34% center / cover no-repeat,
+    linear-gradient(135deg, #F5ECDD, #DCC28E) !important;
+}
+#fgb-team .ft-founder-photo-label {
+  color: rgba(255, 255, 255, .7) !important;
+}
+#fgb-team .ft-founder-name {
+  color: #fff !important;
+}
+#fgb-insights .fi-featured {
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, .82) 0%, rgba(0, 0, 0, .28) 55%, transparent 100%),
+    url("../../assets/photos/crane-construction.png") center / cover no-repeat !important;
+  color: #fff !important;
+  border-color: var(--fg-line) !important;
+}
+#fgb-insights .fi-featured h3,
+#fgb-insights .fi-feat-link {
+  color: #fff !important;
+}
+#fgb-insights .fi-featured p,
+#fgb-insights .fi-feat-tag {
+  color: rgba(255, 255, 255, .75) !important;
+}
+#fgb-insights .fi-feat-link {
+  border-color: rgba(255, 255, 255, .34) !important;
+}
+#fgb-careers .fr-vac-count {
+  color: #51432F !important;
+}
+#fgb-back-top .fbt-label {
+  background: #FFFEFB !important;
+  color: var(--fg-text) !important;
+  border: 1px solid var(--fg-line) !important;
+  box-shadow: 0 10px 28px rgba(91, 76, 53, .08) !important;
+}
+
+@media (max-width: 720px) {
+  #fgb-partner .fpa-info {
+    border-bottom-color: var(--fg-line) !important;
+  }
+}

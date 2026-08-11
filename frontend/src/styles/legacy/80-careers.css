@@ -1,0 +1,241 @@
+/* Careers (карьера) — извлечено из legacy.css (было строками 1864-2123 до разбиения на файлы) */
+
+#fgb-careers {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-paper: #f3f5f6;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-careers,
+#fgb-careers * { box-sizing: border-box; }
+#fgb-careers a { color: inherit; text-decoration: none; }
+#fgb-careers h2, #fgb-careers h3, #fgb-careers p { margin-top: 0; }
+
+/* Section */
+#fgb-careers .fr-section {
+  position: relative;
+  padding: 110px 0 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+#fgb-careers .fr-inner {
+  width: min(1360px, calc(100% - 160px));
+  margin: 0 auto;
+}
+
+/* Top layout */
+#fgb-careers .fr-top {
+  display: grid;
+  grid-template-columns: 54% 46%;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 88px;
+}
+
+#fgb-careers .fr-kicker {
+  margin: 0 0 18px;
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#fgb-careers .fr-title {
+  margin: 0 0 40px;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: clamp(42px, 4vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+#fgb-careers .fr-title span { color: var(--fg-copper); }
+#fgb-careers .fr-lead {
+  margin: 0 0 48px;
+  color: #687077;
+  font-size: 22px;
+  line-height: 1.52;
+  max-width: 520px;
+}
+#fgb-careers .fr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  padding: 0 42px;
+  background: #2d2d2d;
+  color: #fff;
+  border-radius: 4px;
+  font-family: var(--fg-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+/* Values */
+#fgb-careers .fr-values {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#fgb-careers .fr-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px 24px;
+  border-bottom: 1px solid #e8eaeb;
+}
+/* Раньше первая карточка шла без верхнего отступа (fr-value был плоским
+   списком с разделителями). Теперь fr-value — отдельная карточка с рамкой
+   (см. 180-unified-override.css/190-light-theme-final.css), поэтому первой
+   карточке тоже нужен полный внутренний отступ сверху. */
+#fgb-careers .fr-value-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  margin-top: 4px;
+}
+#fgb-careers .fr-value-icon img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  filter: invert(45%) sepia(40%) saturate(600%) hue-rotate(5deg);
+}
+#fgb-careers .fr-value h3 {
+  margin: 0 0 8px;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+#fgb-careers .fr-value p {
+  margin: 0;
+  color: #687077;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Vacancies */
+#fgb-careers .fr-vacancies-wrap {
+  background: var(--fg-paper);
+  padding: 80px 0 100px;
+  margin-top: 0;
+}
+#fgb-careers .fr-vacancies-inner {
+  width: min(1360px, calc(100% - 160px));
+  margin: 0 auto;
+}
+#fgb-careers .fr-vac-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+#fgb-careers .fr-vac-title {
+  margin: 0;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+#fgb-careers .fr-vac-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  background: var(--fg-copper);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+/* Vacancy list */
+#fgb-careers .fr-vac-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#fgb-careers .fr-vac-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 28px;
+  border-bottom: 1px solid #dde0e2;
+  transition: background .16s;
+}
+#fgb-careers .fr-vac-item:first-child { border-top: 1px solid #dde0e2; }
+
+#fgb-careers .fr-vac-title-text {
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+#fgb-careers .fr-vac-dept {
+  display: inline-block;
+  padding: 5px 13px;
+  background: rgba(155,115,87,.1);
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+#fgb-careers .fr-vac-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border: 1.5px solid #c8cdd0;
+  color: #4c555c;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: border-color .16s, color .16s;
+}
+#fgb-careers .fr-vac-item:hover .fr-vac-arrow {
+  border-color: var(--fg-copper);
+  color: var(--fg-copper);
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  #fgb-careers .fr-inner,
+  #fgb-careers .fr-vacancies-inner { width: calc(100% - 88px); }
+}
+@media (max-width: 1060px) {
+  #fgb-careers .fr-top { grid-template-columns: 1fr; gap: 48px; }
+  #fgb-careers .fr-lead { max-width: none; }
+}
+@media (max-width: 720px) {
+  #fgb-careers .fr-section { padding: 64px 0 0; }
+  #fgb-careers .fr-inner,
+  #fgb-careers .fr-vacancies-inner { width: calc(100% - 32px); }
+  #fgb-careers .fr-title { font-size: 38px; }
+  #fgb-careers .fr-lead  { font-size: 18px; }
+  #fgb-careers .fr-btn   { width: 100%; padding: 0; }
+  #fgb-careers .fr-vac-item {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+  #fgb-careers .fr-vac-dept { grid-column: 1; }
+  #fgb-careers .fr-vac-arrow { grid-row: 1; grid-column: 2; }
+  #fgb-careers .fr-vacancies-wrap { padding: 56px 0 72px; }
+}

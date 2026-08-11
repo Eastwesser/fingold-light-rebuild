@@ -1,0 +1,21 @@
+node_modules/
+dist/
+dist-ssr/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# editor/OS
+*.log
+npm-debug.log*
+
+# backend runtime data
+backend/leads.log.jsonl
+.vscode/*
+!.vscode/extensions.json
+
+# "Save Page As" captures of Figma Make (WebGL app bundles, not real assets)
+docs/reference/figma/*.html
+docs/reference/figma/*_files/

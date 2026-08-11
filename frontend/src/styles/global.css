@@ -1,0 +1,23 @@
+/*
+  Глобальные стили проекта (НЕ путать с legacy.css — эталонной копией стилей
+  из Fingold_Light_Rebuild.html). Здесь только базовый reset, необходимый
+  React-приложению и не конфликтующий с fpd-*, fh-*, fct-* и другими
+  классами из эталона.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

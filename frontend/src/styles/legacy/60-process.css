@@ -1,0 +1,244 @@
+/* Process (методология) — извлечено из legacy.css (было строками 1343-1584 до разбиения на файлы) */
+
+#fgb-process {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-paper: #f3f5f6;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-process,
+#fgb-process * { box-sizing: border-box; }
+#fgb-process a  { color: inherit; text-decoration: none; }
+#fgb-process h2, #fgb-process h3, #fgb-process p { margin-top: 0; }
+
+#fgb-process .fp-section {
+  position: relative;
+  padding: 110px 0 128px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Vertical rule */
+#fgb-process .fp-section::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: min(calc((100vw - 1360px) / 2 + 360px), 42%);
+  width: 1px;
+  background: #e8eaeb;
+}
+
+#fgb-process .fp-inner {
+  width: min(1360px, calc(100% - 160px));
+  margin: 0 auto;
+}
+
+/* Header */
+#fgb-process .fp-header {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  gap: 64px;
+  align-items: end;
+  margin-bottom: 88px;
+}
+#fgb-process .fp-kicker {
+  margin: 0 0 20px;
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#fgb-process .fp-title {
+  margin: 0;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: clamp(38px, 3.6vw, 64px);
+  font-weight: 400;
+  line-height: 1.11;
+  letter-spacing: -.035em;
+}
+#fgb-process .fp-title span { color: var(--fg-copper); }
+#fgb-process .fp-lead {
+  margin: 0;
+  color: #687077;
+  font-size: 20px;
+  line-height: 1.56;
+  align-self: end;
+}
+
+/* Steps */
+#fgb-process .fp-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#fgb-process .fp-step {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  gap: 64px;
+  padding: 60px 0;
+  border-top: 1px solid #e8eaeb;
+  position: relative;
+  align-items: start;
+}
+#fgb-process .fp-step:last-child {
+  border-bottom: 1px solid #e8eaeb;
+}
+
+/* Step number */
+#fgb-process .fp-step-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+#fgb-process .fp-num {
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+  border: 1.5px solid #d4d8da;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9aa0a5;
+  font-family: var(--fg-serif);
+  font-size: 18px;
+  font-weight: 400;
+  transition: border-color .2s, color .2s;
+}
+#fgb-process .fp-step:hover .fp-num {
+  border-color: var(--fg-copper);
+  color: var(--fg-copper);
+}
+#fgb-process .fp-step-label {
+  padding-top: 12px;
+}
+#fgb-process .fp-step-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(45,45,45,.36);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#fgb-process .fp-step h3 {
+  margin: 0;
+  color: #2d2d2d;
+  font-family: var(--fg-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Step right */
+#fgb-process .fp-step-right {
+  padding-top: 6px;
+}
+#fgb-process .fp-step p {
+  margin: 0 0 28px;
+  color: #687077;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Detail tags */
+#fgb-process .fp-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0; padding: 0;
+  list-style: none;
+}
+#fgb-process .fp-detail-tags li {
+  position: relative;
+  padding: 6px 14px 6px 22px;
+  background: var(--fg-paper);
+  color: #4e5659;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+#fgb-process .fp-detail-tags li::before {
+  content: "";
+  position: absolute;
+  left: 10px; top: 50%;
+  transform: translateY(-50%);
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--fg-copper);
+}
+
+/* Color bars per step */
+#fgb-process .fp-step:nth-child(1) .fp-num { border-color: #5eb8c4; color: #5eb8c4; }
+#fgb-process .fp-step:nth-child(2) .fp-num { border-color: #a88cb8; color: #a88cb8; }
+#fgb-process .fp-step:nth-child(3) .fp-num { border-color: #e7a050; color: #e7a050; }
+#fgb-process .fp-step:nth-child(4) .fp-num { border-color: #a68856; color: #a68856; }
+#fgb-process .fp-step:nth-child(5) .fp-num { border-color: var(--fg-blue); color: var(--fg-blue); }
+
+/* CTA stripe */
+#fgb-process .fp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 72px;
+  padding: 48px 56px;
+  background: #0d1820;
+  flex-wrap: wrap;
+}
+#fgb-process .fp-cta-text {
+  color: rgba(255,255,255,.72);
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 560px;
+}
+#fgb-process .fp-cta-text strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 28px;
+  font-weight: 400;
+}
+#fgb-process .fp-cta-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 44px;
+  background: var(--fg-copper);
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  #fgb-process .fp-inner { width: calc(100% - 88px); }
+}
+@media (max-width: 960px) {
+  #fgb-process .fp-section::before { display: none; }
+  #fgb-process .fp-header { grid-template-columns: 1fr; gap: 32px; margin-bottom: 56px; }
+  #fgb-process .fp-step  { grid-template-columns: 1fr; gap: 24px; padding: 44px 0; }
+  #fgb-process .fp-cta   { padding: 40px 36px; }
+}
+@media (max-width: 640px) {
+  #fgb-process .fp-section { padding: 64px 0 80px; }
+  #fgb-process .fp-inner  { width: calc(100% - 32px); }
+  #fgb-process .fp-title  { font-size: 34px; }
+  #fgb-process .fp-lead   { font-size: 17px; }
+  #fgb-process .fp-cta    { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+  #fgb-process .fp-cta-btn { width: 100%; }
+}

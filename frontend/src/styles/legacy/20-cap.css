@@ -1,0 +1,193 @@
+/* Cap (решения / карусель) — извлечено из legacy.css (было строками 380-568 до разбиения на файлы) */
+
+#fgb-cap {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-paper: #f3f5f6;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  /* В оригинале это место оставалось пустым плейсхолдером (aria-label="Здание и небо",
+     комментарий "ЗАМЕНИТЕ URL ИЗОБРАЖЕНИЯ ЗДЕСЬ" так и не был заполнен). Ставим сюда
+     небоскрёб из figma_pics — по смыслу совпадает с aria-label. */
+  --fg-cap-image: url("../../assets/photos/skyscraper-sky.png");
+  font-family: var(--fg-sans);
+}
+#fgb-cap, #fgb-cap * { box-sizing: border-box; }
+#fgb-cap a { color: inherit; text-decoration: none; }
+#fgb-cap h2, #fgb-cap h3, #fgb-cap p { margin-top: 0; }
+
+#fgb-cap .fc-section {
+  position: relative;
+  padding: 96px 0 118px;
+  background: linear-gradient(90deg, #fff 0 31%, transparent 31% 100%);
+  overflow: hidden;
+}
+#fgb-cap .fc-section::after {
+  content: "";
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 27%; height: 210px;
+  background: var(--fg-paper);
+  z-index: 0;
+}
+#fgb-cap .fc-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1800px, calc(100% - 230px));
+  margin: 0 auto;
+}
+#fgb-cap .fc-layout {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  align-items: start;
+}
+
+/* Left image */
+#fgb-cap .fc-image {
+  height: 1000px;
+  border-bottom: 6px solid var(--fg-copper);
+  background:
+    var(--fg-cap-image) 72% center / cover no-repeat,
+    linear-gradient(180deg, #d7ecfb 0%, #fff 40%, #b7c9d7 100%);
+}
+
+/* Right content */
+#fgb-cap .fc-content {
+  min-width: 0;
+  padding: 110px 0 0 124px;
+}
+#fgb-cap .fc-title {
+  max-width: 900px;
+  margin: 0 0 84px;
+  color: #343a3e;
+  font-family: var(--fg-serif);
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1.18;
+}
+#fgb-cap .fc-title span { color: var(--fg-copper); }
+
+/* Carousel */
+#fgb-cap .fc-viewport {
+  overflow: hidden;
+}
+#fgb-cap .fc-track {
+  display: grid;
+  grid-template-columns: repeat(5, 344px);
+  gap: 38px;
+  transition: transform .34s ease;
+}
+
+/* Cards */
+#fgb-cap .fc-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 512px;
+  padding: 44px 31px 34px;
+  display: flex;
+  flex-direction: column;
+  background: var(--fg-paper);
+}
+#fgb-cap .fc-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+}
+#fgb-cap .fc-card:nth-child(4n+1)::before { background: #5eb8c4; }
+#fgb-cap .fc-card:nth-child(4n+2)::before { background: #a88cb8; }
+#fgb-cap .fc-card:nth-child(4n+3)::before { background: #e7a050; }
+#fgb-cap .fc-card:nth-child(4n+4)::before { background: #a68856; }
+#fgb-cap .fc-card:nth-child(5)::before    { background: #2d2d2d; }
+
+#fgb-cap .fc-icon {
+  width: 52px; height: 52px;
+  margin-bottom: 34px;
+}
+#fgb-cap .fc-card:nth-child(1) .fc-icon { color: #5eb8c4; }
+#fgb-cap .fc-card:nth-child(2) .fc-icon { color: #a88cb8; }
+#fgb-cap .fc-card:nth-child(3) .fc-icon { color: #e7a050; }
+#fgb-cap .fc-card:nth-child(4) .fc-icon { color: #a68856; }
+#fgb-cap .fc-card:nth-child(5) .fc-icon { color: #2d2d2d; }
+#fgb-cap .fc-icon svg {
+  width: 100%; height: 100%;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+#fgb-cap .fc-card h3 {
+  margin-bottom: 26px;
+  color: #3e4549;
+  font-family: var(--fg-serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+#fgb-cap .fc-card p {
+  margin: 0;
+  color: #6b7378;
+  font-size: 17px;
+  line-height: 1.45;
+}
+#fgb-cap .fc-link {
+  margin-top: auto;
+  color: var(--fg-blue);
+  font-size: 17px;
+  font-weight: 700;
+}
+#fgb-cap .fc-link span { margin-left: 22px; font-size: 28px; vertical-align: -2px; }
+
+/* Controls */
+#fgb-cap .fc-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 70px;
+}
+#fgb-cap .fc-arrow {
+  width: 54px; height: 54px;
+  border: 1.5px solid #6c7479;
+  border-radius: 50%;
+  background: #fff;
+  color: #5b6267;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#fgb-cap .fc-dot {
+  width: 18px; height: 18px;
+  border: 2px solid #4d5458;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+#fgb-cap .fc-dot.is-active {
+  background: #c7cccf;
+  border-color: #c7cccf;
+}
+
+/* Responsive */
+@media (max-width: 1500px) {
+  #fgb-cap .fc-inner   { width: calc(100% - 88px); }
+  #fgb-cap .fc-title   { font-size: 50px; }
+  #fgb-cap .fc-content { padding-left: 80px; }
+}
+@media (max-width: 1180px) {
+  #fgb-cap .fc-section  { background: #fff; }
+  #fgb-cap .fc-inner    { width: calc(100% - 44px); }
+  #fgb-cap .fc-layout   { grid-template-columns: 1fr; }
+  #fgb-cap .fc-image    { height: 58vw; min-height: 440px; }
+  #fgb-cap .fc-content  { padding: 70px 0 0; }
+  #fgb-cap .fc-track    { grid-template-columns: repeat(5, minmax(280px,1fr)); }
+}
+@media (max-width: 720px) {
+  #fgb-cap .fc-title    { font-size: 38px; }
+  #fgb-cap .fc-card     { min-height: 430px; }
+  #fgb-cap .fc-track    { grid-template-columns: 1fr; gap: 18px; transform: none !important; }
+  #fgb-cap .fc-controls { display: none; }
+}

@@ -1,0 +1,317 @@
+/* Partner (партнёрство, форма) — извлечено из legacy.css (было строками 2664-2978 до разбиения на файлы) */
+
+#fgb-partner {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-paper: #f3f5f6;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-partner,
+#fgb-partner * { box-sizing: border-box; }
+#fgb-partner a  { color: inherit; text-decoration: none; }
+#fgb-partner h2, #fgb-partner h3, #fgb-partner p { margin-top: 0; }
+#fgb-partner input,
+#fgb-partner select,
+#fgb-partner textarea { font: inherit; }
+
+#fgb-partner .fpa-section {
+  position: relative;
+  background: #0d1820;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Grid lines décor */
+#fgb-partner .fpa-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+/* Layout */
+#fgb-partner .fpa-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 900px;
+}
+
+/* Left info */
+#fgb-partner .fpa-info {
+  padding: 100px max(48px, calc((100vw - 1660px) / 2 + 60px)) 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+#fgb-partner .fpa-kicker {
+  margin: 0 0 24px;
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#fgb-partner .fpa-title {
+  margin: 0 0 36px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: clamp(36px, 3.4vw, 58px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+#fgb-partner .fpa-title span { color: var(--fg-copper); }
+#fgb-partner .fpa-lead {
+  margin: 0 0 56px;
+  color: rgba(255,255,255,.6);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* Partner types */
+#fgb-partner .fpa-types {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 52px;
+}
+#fgb-partner .fpa-type {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+#fgb-partner .fpa-type:first-child { border-top: 1px solid rgba(255,255,255,.07); }
+#fgb-partner .fpa-type-bar {
+  flex-shrink: 0;
+  width: 4px;
+  height: 40px;
+  margin-top: 2px;
+  border-radius: 2px;
+}
+#fgb-partner .fpa-type:nth-child(1) .fpa-type-bar { background: #5eb8c4; }
+#fgb-partner .fpa-type:nth-child(2) .fpa-type-bar { background: #a88cb8; }
+#fgb-partner .fpa-type:nth-child(3) .fpa-type-bar { background: #e7a050; }
+#fgb-partner .fpa-type:nth-child(4) .fpa-type-bar { background: #a68856; }
+
+#fgb-partner .fpa-type h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+#fgb-partner .fpa-type p {
+  margin: 0;
+  color: rgba(255,255,255,.48);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Stats */
+#fgb-partner .fpa-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#fgb-partner .fpa-stat-num {
+  display: block;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.04em;
+  margin-bottom: 6px;
+}
+#fgb-partner .fpa-stat-num em { font-style: normal; color: var(--fg-copper); }
+#fgb-partner .fpa-stat-label {
+  color: rgba(255,255,255,.38);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* Right: partner form */
+#fgb-partner .fpa-form-panel {
+  padding: 100px 80px 80px max(48px, 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#fgb-partner .fpa-form-title {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+#fgb-partner .fpa-form-sub {
+  margin: 0 0 44px;
+  color: rgba(255,255,255,.44);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Form controls */
+#fgb-partner .fpa-form {
+  font-family: var(--fg-sans);
+  max-width: 480px;
+}
+#fgb-partner .fpa-field {
+  margin-bottom: 20px;
+}
+#fgb-partner .fpa-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,.38);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#fgb-partner .fpa-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .16s;
+}
+#fgb-partner .fpa-input::placeholder { color: rgba(255,255,255,.2); }
+#fgb-partner .fpa-input:focus { border-color: var(--fg-copper); }
+
+#fgb-partner .fpa-select-wrap { position: relative; }
+#fgb-partner .fpa-select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: 16px;
+  width: 7px; height: 7px;
+  border-right: 1.5px solid rgba(255,255,255,.38);
+  border-bottom: 1.5px solid rgba(255,255,255,.38);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+#fgb-partner .fpa-select {
+  width: 100%;
+  height: 52px;
+  padding: 0 42px 0 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  appearance: none;
+  outline: none;
+  transition: border-color .16s;
+  cursor: pointer;
+}
+#fgb-partner .fpa-select option { background: #0d1820; color: #fff; }
+#fgb-partner .fpa-select:focus { border-color: var(--fg-copper); }
+
+#fgb-partner .fpa-textarea {
+  width: 100%;
+  height: 110px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  transition: border-color .16s;
+}
+#fgb-partner .fpa-textarea::placeholder { color: rgba(255,255,255,.2); }
+#fgb-partner .fpa-textarea:focus { border-color: var(--fg-copper); }
+
+#fgb-partner .fpa-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Error */
+#fgb-partner .t-input-error {
+  display: none;
+  margin-top: 6px;
+  color: #e07060;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+#fgb-partner .vb-input-group.error .t-input-error { display: block; }
+#fgb-partner .vb-input-group.error .fpa-input,
+#fgb-partner .vb-input-group.error .fpa-select,
+#fgb-partner .vb-input-group.error .fpa-textarea { border-color: #c0392b; }
+
+#fgb-partner .fpa-submit {
+  width: 100%;
+  height: 58px;
+  margin-top: 10px;
+  background: var(--fg-copper);
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  font-family: var(--fg-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s;
+}
+#fgb-partner .fpa-submit:hover { background: #8a6248; }
+
+#fgb-partner .fpa-privacy {
+  margin-top: 16px;
+  color: rgba(255,255,255,.28);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+#fgb-partner .fpa-privacy a { color: var(--fg-copper); }
+
+#fgb-partner .js-successbox {
+  display: none;
+  padding: 24px 28px;
+  background: rgba(94,184,196,.12);
+  border-left: 4px solid #5eb8c4;
+  margin-bottom: 28px;
+}
+#fgb-partner .js-successbox p { margin: 0; color: rgba(255,255,255,.88); font-size: 16px; line-height: 1.5; }
+
+/* Responsive */
+@media (max-width: 1180px) {
+  #fgb-partner .fpa-grid { grid-template-columns: 1fr; min-height: auto; }
+  #fgb-partner .fpa-info { padding: 80px 44px 64px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  #fgb-partner .fpa-form-panel { padding: 72px 44px 80px; }
+  #fgb-partner .fpa-form { max-width: none; }
+}
+@media (max-width: 640px) {
+  #fgb-partner .fpa-info { padding: 60px 24px 48px; }
+  #fgb-partner .fpa-form-panel { padding: 52px 24px 64px; }
+  #fgb-partner .fpa-stats { grid-template-columns: 1fr 1fr; }
+  #fgb-partner .fpa-row { grid-template-columns: 1fr; }
+  #fgb-partner .fpa-title { font-size: 36px; }
+}

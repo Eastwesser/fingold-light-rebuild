@@ -1,0 +1,29 @@
+/*
+  Точка входа для стилей эталона — см. docs/reference/Fingold_Light_Rebuild.html.
+  Разбито на файлы по секциям (Этап 5.2, "лёгкое" разбиение — см. docs/TODO.md):
+  порядок @import сохраняет исходный порядок конкатенации стилей эталона,
+  это важно, т.к. последние два файла (unified-override, light-theme-final)
+  намеренно переопределяют более ранние секции через !important и должны
+  подключаться строго последними. Классы (fpd-*, fn-*, ff-* и т.д.) не
+  переименованы — это не CSS Modules, а обычные глобальные стили.
+*/
+@import './legacy/10-nav-hero-about.css';
+@import './legacy/20-cap.css';
+@import './legacy/30-serve.css';
+@import './legacy/40-global-routes.css';
+@import './legacy/50-products.css';
+@import './legacy/60-process.css';
+@import './legacy/70-insights.css';
+@import './legacy/80-careers.css';
+@import './legacy/90-team.css';
+@import './legacy/100-news.css';
+@import './legacy/110-partner.css';
+@import './legacy/120-contacts.css';
+@import './legacy/130-login.css';
+@import './legacy/140-footer.css';
+@import './legacy/150-search.css';
+@import './legacy/160-cookie.css';
+@import './legacy/170-glue.css';
+/* PROTECTED — см. AGENTS.md/SKILL.md: не менять содержимое этих двух файлов. */
+@import './legacy/180-unified-override.css';
+@import './legacy/190-light-theme-final.css';

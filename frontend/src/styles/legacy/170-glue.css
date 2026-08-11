@@ -1,0 +1,97 @@
+/* Глобальные связующие стили (scroll, back-to-top, reveal, focus-ring) — извлечено из legacy.css (было строками 4278-4372 до разбиения на файлы) */
+
+/* =============================================
+   ГЛОБАЛЬНЫЕ СВЯЗУЮЩИЕ СТИЛИ
+   (scroll offset, кнопка наверх, focus-ring)
+   ============================================= */
+
+/* Плавная прокрутка с отступом под sticky nav */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset для anchor-ссылок: высота шапки + зазор */
+:target {
+  scroll-margin-top: 96px;
+}
+
+/* === Кнопка «Наверх» === */
+#fgb-back-top {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 150;
+  width: 52px;
+  height: 52px;
+  background: #0d1820;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity .22s, transform .22s, background .16s;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,.22);
+}
+#fgb-back-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+#fgb-back-top:hover { background: #9b7357; }
+#fgb-back-top svg {
+  width: 20px; height: 20px;
+  stroke: currentColor; fill: none;
+  stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+#fgb-back-top .fbt-label {
+  position: absolute;
+  right: 60px;
+  white-space: nowrap;
+  background: #0d1820;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 6px 12px;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .14s;
+}
+#fgb-back-top:hover .fbt-label { opacity: 1; }
+
+/* Section transitions — subtle entrance on scroll */
+.fgb-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.fgb-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Focus ring — единый стиль для всего сайта */
+*:focus-visible {
+  outline: 2px solid #9b7357;
+  outline-offset: 3px;
+}
+
+/* Убираем outline у mouse-users */
+*:focus:not(:focus-visible) { outline: none; }
+
+/* =============================================
+   МЕЖБЛОКОВЫЕ СТИЛИ: согласованные отступы
+   ============================================= */
+
+/* Каждый блок верхнего уровня — без лишних gap */
+#fgb-hero   + #fgb-about { margin-top: 0; }
+#fgb-about  + * { margin-top: 0; }
+

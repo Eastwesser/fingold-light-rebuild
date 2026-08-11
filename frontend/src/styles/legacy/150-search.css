@@ -1,0 +1,214 @@
+/* Search overlay (поиск) — извлечено из legacy.css (было строками 3852-4063 до разбиения на файлы) */
+
+#fgb-search-trigger {
+  /* Невидимый якорь для ссылки #search из навигации */
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 0;
+  overflow: hidden;
+}
+
+#fgb-search-overlay {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-search-overlay,
+#fgb-search-overlay * { box-sizing: border-box; }
+
+/* Overlay backdrop */
+#fgb-search-overlay .fso-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(13,24,32,.92);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .24s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+}
+#fgb-search-overlay.is-open .fso-backdrop {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Panel */
+#fgb-search-overlay .fso-panel {
+  width: min(760px, calc(100% - 40px));
+  transform: translateY(-20px);
+  transition: transform .24s ease;
+}
+#fgb-search-overlay.is-open .fso-panel {
+  transform: translateY(0);
+}
+
+/* Label */
+#fgb-search-overlay .fso-label {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,.36);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+/* Input row */
+#fgb-search-overlay .fso-input-row {
+  display: flex;
+  align-items: stretch;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 2px;
+  overflow: hidden;
+}
+#fgb-search-overlay .fso-input {
+  flex: 1;
+  height: 68px;
+  padding: 0 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: var(--fg-sans);
+  font-size: 22px;
+  font-weight: 400;
+  outline: none;
+}
+#fgb-search-overlay .fso-input::placeholder {
+  color: rgba(255,255,255,.22);
+}
+#fgb-search-overlay .fso-search-btn {
+  flex-shrink: 0;
+  width: 68px;
+  background: var(--fg-copper);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .16s;
+}
+#fgb-search-overlay .fso-search-btn:hover { background: #8a6248; }
+#fgb-search-overlay .fso-search-btn svg {
+  width: 22px; height: 22px;
+  stroke: #fff; fill: none;
+  stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Suggestions */
+#fgb-search-overlay .fso-suggestions {
+  margin-top: 28px;
+}
+#fgb-search-overlay .fso-sugg-label {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,.28);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#fgb-search-overlay .fso-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#fgb-search-overlay .fso-tag {
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.64);
+  font-family: var(--fg-sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  transition: border-color .14s, color .14s;
+}
+#fgb-search-overlay .fso-tag:hover {
+  border-color: var(--fg-copper);
+  color: var(--fg-copper);
+}
+
+/* Results area */
+#fgb-search-overlay .fso-results {
+  margin-top: 32px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+#fgb-search-overlay .fso-results::-webkit-scrollbar { width: 4px; }
+#fgb-search-overlay .fso-results::-webkit-scrollbar-track { background: transparent; }
+#fgb-search-overlay .fso-results::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 2px; }
+
+#fgb-search-overlay .fso-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  cursor: pointer;
+  text-decoration: none;
+}
+#fgb-search-overlay .fso-result-item:last-child { border-bottom: 0; }
+#fgb-search-overlay .fso-result-tag {
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#fgb-search-overlay .fso-result-title {
+  color: rgba(255,255,255,.88);
+  font-family: var(--fg-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  transition: color .14s;
+}
+#fgb-search-overlay .fso-result-item:hover .fso-result-title {
+  color: #fff;
+}
+#fgb-search-overlay .fso-no-results {
+  display: none;
+  padding: 24px 0;
+  color: rgba(255,255,255,.36);
+  font-size: 15px;
+}
+
+/* Close button */
+#fgb-search-overlay .fso-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 50%;
+  color: rgba(255,255,255,.7);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .16s;
+}
+#fgb-search-overlay .fso-close:hover { background: rgba(255,255,255,.16); }
+
+@media (max-width: 640px) {
+  #fgb-search-overlay .fso-backdrop { padding-top: 80px; }
+  #fgb-search-overlay .fso-input { height: 56px; font-size: 18px; }
+  #fgb-search-overlay .fso-search-btn { width: 56px; }
+  #fgb-search-overlay .fso-close { top: 18px; right: 18px; }
+}

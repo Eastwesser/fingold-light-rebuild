@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      - PORT=4000
+    expose:
+      - "4000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"

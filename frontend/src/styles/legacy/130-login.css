@@ -1,0 +1,324 @@
+/* Login (личный кабинет) — извлечено из legacy.css (было строками 3295-3616 до разбиения на файлы) */
+
+#fgb-login {
+  --fg-copper: #9b7357;
+  --fg-blue: #2186a0;
+  --fg-serif: "Times New Roman", Times, Georgia, serif;
+  --fg-sans: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: var(--fg-sans);
+}
+#fgb-login,
+#fgb-login * { box-sizing: border-box; }
+#fgb-login a { color: inherit; text-decoration: none; }
+#fgb-login h2, #fgb-login p { margin-top: 0; }
+
+/* Section */
+#fgb-login .fl-section {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  background: #0d1820;
+  overflow: hidden;
+}
+
+/* Decorative grid lines */
+#fgb-login .fl-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+}
+
+/* Left: brand panel */
+#fgb-login .fl-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px max(48px, calc((100vw - 1660px) / 2 + 80px)) 64px 80px;
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+#fgb-login .fl-logo {
+  color: rgba(166,136,86,.9);
+  font-family: var(--fg-serif);
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+#fgb-login .fl-brand-center {
+  padding: 40px 0;
+}
+#fgb-login .fl-brand-kicker {
+  margin: 0 0 20px;
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#fgb-login .fl-brand-title {
+  margin: 0 0 40px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: clamp(32px, 2.8vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+#fgb-login .fl-brand-title span { color: var(--fg-copper); }
+
+/* Feature list */
+#fgb-login .fl-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#fgb-login .fl-feature {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+#fgb-login .fl-feat-dot {
+  flex-shrink: 0;
+  width: 8px; height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--fg-copper);
+}
+#fgb-login .fl-feature p {
+  margin: 0;
+  color: rgba(255,255,255,.6);
+  font-size: 16px;
+  line-height: 1.52;
+}
+#fgb-login .fl-feature strong {
+  color: rgba(255,255,255,.9);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+#fgb-login .fl-brand-footer {
+  color: rgba(255,255,255,.28);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+/* Right: form panel */
+#fgb-login .fl-form-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 80px;
+  background: rgba(255,255,255,.03);
+}
+#fgb-login .fl-form-box {
+  width: 100%;
+  max-width: 420px;
+}
+#fgb-login .fl-form-title {
+  margin: 0 0 8px;
+  color: #fff;
+  font-family: var(--fg-serif);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+#fgb-login .fl-form-sub {
+  margin: 0 0 44px;
+  color: rgba(255,255,255,.48);
+  font-size: 15px;
+  line-height: 1.5;
+}
+#fgb-login .fl-form-sub a {
+  color: var(--fg-copper);
+  font-weight: 600;
+}
+
+/* Form */
+#fgb-login .fl-form {
+  font-family: var(--fg-sans);
+}
+#fgb-login .fl-form input { font: inherit; }
+
+#fgb-login .fl-field {
+  margin-bottom: 20px;
+}
+#fgb-login .fl-field-label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,.44);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+#fgb-login .fl-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .16s, background .16s;
+}
+#fgb-login .fl-input::placeholder { color: rgba(255,255,255,.22); }
+#fgb-login .fl-input:focus {
+  border-color: var(--fg-copper);
+  background: rgba(255,255,255,.09);
+}
+
+/* Password wrap */
+#fgb-login .fl-pass-wrap {
+  position: relative;
+}
+#fgb-login .fl-pass-toggle {
+  position: absolute;
+  top: 50%; right: 16px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,.38);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+#fgb-login .fl-pass-toggle:hover { color: rgba(255,255,255,.7); }
+#fgb-login .fl-pass-toggle svg {
+  width: 18px; height: 18px;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Field meta row */
+#fgb-login .fl-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+#fgb-login .fl-meta .fl-field-label { margin: 0; }
+#fgb-login .fl-forgot {
+  color: var(--fg-copper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Validation error */
+#fgb-login .fl-error-msg {
+  display: none;
+  margin-top: 6px;
+  color: #e07060;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+#fgb-login .fl-field.has-error .fl-input { border-color: #c0392b; }
+#fgb-login .fl-field.has-error .fl-error-msg { display: block; }
+
+/* Submit */
+#fgb-login .fl-submit {
+  width: 100%;
+  height: 56px;
+  margin-top: 8px;
+  background: var(--fg-copper);
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  font-family: var(--fg-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s;
+}
+#fgb-login .fl-submit:hover { background: #8a6248; }
+
+/* Divider */
+#fgb-login .fl-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+  color: rgba(255,255,255,.22);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+#fgb-login .fl-divider::before,
+#fgb-login .fl-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,.1);
+}
+
+/* Request access */
+#fgb-login .fl-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 2px;
+  color: rgba(255,255,255,.7);
+  font-family: var(--fg-sans);
+  font-size: 15px;
+  font-weight: 600;
+  transition: border-color .18s, color .18s;
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  text-align: center;
+}
+#fgb-login .fl-register:hover {
+  border-color: var(--fg-copper);
+  color: var(--fg-copper);
+}
+
+/* Back link */
+#fgb-login .fl-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 36px;
+  color: rgba(255,255,255,.32);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+#fgb-login .fl-back::before {
+  content: "‹";
+  font-size: 18px;
+  line-height: 1;
+}
+#fgb-login .fl-back:hover { color: rgba(255,255,255,.6); }
+
+/* Responsive */
+@media (max-width: 1060px) {
+  #fgb-login .fl-section { grid-template-columns: 1fr; min-height: auto; }
+  #fgb-login .fl-brand { padding: 64px 44px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  #fgb-login .fl-form-panel { padding: 64px 44px; }
+  #fgb-login .fl-form-box { max-width: 100%; }
+}
+@media (max-width: 640px) {
+  #fgb-login .fl-brand { padding: 48px 24px; }
+  #fgb-login .fl-form-panel { padding: 48px 24px; }
+  #fgb-login .fl-brand-title { font-size: 30px; }
+}
